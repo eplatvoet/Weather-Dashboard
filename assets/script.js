@@ -2,16 +2,17 @@
 // &APPID=940bd19264df2f0bdcef88196b007f5f
 
 $(document).ready(function () {
-    // //DATE AND TIME DISPLAYED
-    // $("#currentDay").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
+    
+    //DATE AND TIME DISPLAYED
+    $(".currentDay").text(moment().format('MMMM Do YYYY, h:mm a'));
 
-    // //FUNCTION FOR UPDATING TIME WITHOUT REFRESHING THE PAGE
-    // function updateClock() {
-    //         $("#currentDay").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
-    //     }
-
-    //     setInterval(updateClock, 1000);
-    //     console.log("the current time is " + moment());
+    //FUNCTION FOR UPDATING TIME WITHOUT REFRESHING THE PAGE
+    function updateClock() {
+            $("#currentDay").text(moment().format('MMMM Do YYYY, h:mm a'));
+        }
+        
+        setInterval(updateClock, 1000);
+        console.log("the current time is " + moment());
 
     //ONCE USER ENTERS CITY AND PRESSES BUTTON:
     $("#getWeatherForecast").click(function () {
@@ -28,10 +29,10 @@ $(document).ready(function () {
                 console.log(queryURL);
                 console.log(response);
                 //BEGIN DISPLAYING INFO FROM API
-                $(".city").html("<h2>" + response.name + " Weather Information</h2><br>");
+                $(".city").html("<h2>Currently in " + response.name + ":</h2><br>");
 
                 //CONTINUING TO PULL INFO FROM API TO DISPLAY
-                $(".weather").html("Current Weather: " + response.weather[0].description + " <img src='https://openweathermap.org/img/w/" + response.weather[0].icon + ".png'>");
+                $(".weather").html("Conditions: " + response.weather[0].description + " <img src='https://openweathermap.org/img/w/" + response.weather[0].icon + ".png'>");
                 $(".coordination").text("Coordinates: Lat:" + response.coord.lat + ", Lon: " + response.coord.lon)
                 var tempF = (response.main.temp - 273.15) * 1.80 + 32;
                 var tempFeels = (response.main.feels_like - 273.15) * 1.80 + 32;
@@ -51,6 +52,7 @@ $(document).ready(function () {
                     console.log(queryTwo)
                     console.log(responseTwo)
                     $(".uvIndex").text("UV Index: "+ responseTwo.current.uvi);
+                    
                     //add date to forecast
                     //FORECASTED DAY 1
                     $(".weatherOne").html("<img src='https://openweathermap.org/img/w/" + responseTwo.daily[1].weather[0].icon + ".png'>");
@@ -76,7 +78,7 @@ $(document).ready(function () {
                     //FORECASTED DAY 4
                     $(".weatherFour").html("<img src='https://openweathermap.org/img/w/" + responseTwo.daily[4].weather[0].icon + ".png'>");
                     var highFour = (responseTwo.daily[4].temp.max - 273.15) * 1.80 + 32;
-                    var lowTwo = (responseTwo.daily[4].temp.min - 273.15) * 1.80 + 32;
+                    var lowFour = (responseTwo.daily[4].temp.min - 273.15) * 1.80 + 32;
                     $(".highFour").html("High: " + highFour.toFixed(2) + "&deg;F");
                     $(".lowFour").html("Low: " + lowFour.toFixed(2) + "&deg;F");
                     $(".humidityFour").text("Humidity: " + responseTwo.daily[4].humidity + "%");
@@ -84,9 +86,9 @@ $(document).ready(function () {
                     $(".weatherFive").html("<img src='https://openweathermap.org/img/w/" + responseTwo.daily[5].weather[0].icon + ".png'>");
                     var highFive = (responseTwo.daily[5].temp.max - 273.15) * 1.80 + 32;
                     var lowFive = (responseTwo.daily[5].temp.min - 273.15) * 1.80 + 32;
-                    $(".highTwo").html("High: " + highFive.toFixed(2) + "&deg;F");
-                    $(".lowTwo").html("Low: " + lowFive.toFixed(2) + "&deg;F");
-                    $(".humidityTwo").text("Humidity: " + responseTwo.daily[5].humidity + "%");
+                    $(".highFive").html("High: " + highFive.toFixed(2) + "&deg;F");
+                    $(".lowFive").html("Low: " + lowFive.toFixed(2) + "&deg;F");
+                    $(".humidityFive").text("Humidity: " + responseTwo.daily[5].humidity + "%");
 
                 })
             })
