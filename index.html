@@ -9,24 +9,31 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 <link rel="stylesheet" href="assets/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
 <title>Weather Dashboard</title>
 </head>
 <body>
     <div class="jumbotron">Weather Dashboard</div>
-<div class="row">
-<div class="col-sm-3">
+<div class="container">
+    <div class="row">
+<div class="col-sm-3" id="userInput">
 <input id="city" placeholder="Enter City Name:"></input>
 
 <button id="getWeatherForecast">Get Weather</button>
+<div class="searchHistory"></div>
 </div>
 <div class ="col-sm-7" id="showWeatherForecast">
+    <div id="currentDay"></div>
     <div class="city"></div>
-    <div class="coordination"></div>
     <div class="weather"></div>
-    <div class="wind"></div>
+    <div class="coordination"></div>
+    <div class="temp"></div>
+    <div class="tempFeels"></div>
     <div class="humidity"></div>
+    <div class="wind"></div>
+    <div class="uvIndex"></div>
 
+</div>
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

@@ -4,3 +4,8 @@
     background-image: url(images/weather.jpg);
     background-position: center;
 }
+.container{
+    font-family: 'Staatliches', cursive;
+    font-size: 20px;
+    padding: 10px;
+}
