@@ -1,0 +1,6 @@
+.jumbotron{
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 80px;
+    background-image: url(images/weather.jpg);
+    background-position: center;
+}

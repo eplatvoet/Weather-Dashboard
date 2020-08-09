@@ -1,0 +1,4 @@
+API KEY:
+940bd19264df2f0bdcef88196b007f5f
+
+api.openweathermap.org/data/2.5/weather?q=brentwood,ca&APPID=940bd19264df2f0bdcef88196b007f5f

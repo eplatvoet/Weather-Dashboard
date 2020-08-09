@@ -7,13 +7,40 @@
 <meta name="Description" content="Enter your description here"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/style.css">
+<!-- GOOGLE FONT LINKS -->
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
 <title>Weather Dashboard</title>
 </head>
 <body>
+<div class="jumbotron">
+    Weather Dashboard
+</div>
+
+<div class="container">
+        <div class="col-sm-4">
+                <!-- submit form for city -->
+                <input type="text" id="userInput" placeholder="Enter City Here">
+                <button class="submitCity">Submit</button>
+                <!-- previous search history -->
+        </div>
+
+        <div class="col-sm-7">
+                <!-- current info -->
+                <div class="city"></div>
+                <div class="wind"></div>
+                <div class="humidity"></div>
+                <div class="temp"></div>
+              
+                <!-- Add extra div for the bonus Fahrenheit temp -->
+                <div class="tempF"></div>
+                <!-- 5 day forecast -->
+        </div>
+    </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="assets/script.js"></script>
 </body>
 </html>
