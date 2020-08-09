@@ -13,3 +13,16 @@
 .fiveDays{
     font-size: 16px;
 }
+
+/* UV INDEX CHANGE */
+.severe{
+    color: red;
+}
+
+.moderate{
+    color: yellow;
+}
+
+.favorable{
+    color: green;
+}
