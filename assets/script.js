@@ -117,8 +117,15 @@ $(document).ready(function () {
     var storage = JSON.parse(window.localStorage.getItem("Cities: ")) || [];
     console.log(storage);
     for (i = 0; i < storage.length; i++) {
-        var cityList = $("<ul>").text(storage[i]);
+        var cityList = $("<button>").html(storage[i]);
         $(".searchHistory").append(cityList);
+        // showUpdatedInfo()
+        // //FUNCTION FOR BUTTONS TO DISPLAY THEIR WEATHER INFO ON CLICK
+        // function showUpdatedInfo() {
+        //     $("<button>").on("click", function(){
+                //RE-RUN AJAX CALL FOR THIS SPECIFIC CITY
+        //     })
+        // }
 
     }
 });
