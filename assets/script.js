@@ -14,11 +14,17 @@ $(document).ready(function () {
     //ONCE USER ENTERS CITY AND PRESSES BUTTON:
     $("#getWeatherForecast").click(function () {
         var city = $("#city").val();
+        //close first on click function
         var apiKey = "&APPID=940bd19264df2f0bdcef88196b007f5f";
         var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + apiKey;
       
+    //write another on click function for storage
+    //call ajax function {
         
+    }
         //RETRIEVING INFORMTION FROM OPENWEATHER API: CURRENT WEATHER DATA
+
+       //turn axax call into a function 
         $.ajax({
             url: queryURL,
             method: "GET"
