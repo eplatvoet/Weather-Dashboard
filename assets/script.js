@@ -26,7 +26,7 @@ $(document).ready(function () {
         .then(function (response) {
             console.log(queryURL);
             console.log(response);
-            //getWeatherForecast.push(city)
+            // getWeatherForecast.push(city)
             // window.localStorage.setItem("City", JSON.stringify(city))
             
             //BEGIN DISPLAYING INFO FROM API
@@ -57,13 +57,13 @@ $(document).ready(function () {
                 console.log(responseTwo)
                 $(".uvIndex").text("UV Index: " + responseTwo.current.uvi);
                 console.log(parseInt(responseTwo.current.uvi))
-                // if(parseInt(responseTwo.current.uvi) > 8){
-                    //     $(".uvIndex").addClass("severe");
-                    // } else if(parseInt(responseTwo.current.uvi) < 8 && parseInt(responseTwo.current.uvi) > 4) {
-                        //     $(".uvIndex").addClass("moderate");
-                        // } else {
-                            //     $(".uvIndex").addClass("favorable")
-                            // };
+                if(parseInt(responseTwo.current.uvi) >= 8){
+                        $(".uvIndex").addClass("severe");
+                    } else if(parseInt(responseTwo.current.uvi) < 8 && parseInt(responseTwo.current.uvi) > 4) {
+                            $(".uvIndex").addClass("moderate");
+                        } else {
+                                $(".uvIndex").addClass("favorable")
+                            };
                             
                             
                             //* ADD DATE TO FORECAST *
@@ -111,8 +111,6 @@ $(document).ready(function () {
                         })
                     })
                 })
-    // function showCities(){
-    // localStorage.setItem("City:", JSON.stringify(city));
-    // } 
-     // $(".searchHistory").val(localStorage.getItem("City:", city));
+    // 
+    //  $(".searchHistory").val(localStorage.getItem("City:", city));
             });
