@@ -26,3 +26,11 @@
 .favorable{
     color: green;
 }
+
+.odd{
+    background-color: #DADADA;
+}
+
+.even{
+    background-color: #80ccff;
+}
