@@ -12,16 +12,16 @@ SO THAT I can plan a trip accordingly
 ```
 
 ## TECHNOLOGIES USED:
--HTML\
--CSS\
--JAVASCRIPT\
--JQUERY\
--OpenWeather API\
+-HTML \
+-CSS \
+-JAVASCRIPT \
+-JQUERY \
+-OpenWeather API \
 -moment.js
 
 
 ## LINKS:
--https://github.com/eplatvoet/Weather-Dashboard\
+-https://github.com/eplatvoet/Weather-Dashboard \
 -https://eplatvoet.github.io/Weather-Dashboard/
 
 ## SCREENSHOT:
