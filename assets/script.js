@@ -6,9 +6,6 @@ $(document).ready(function () {
         city = $("#city").val();
         displayInformation();
     });
-    // //close first on click function
-
-    // //write another on click function for storage
     //STORING CITIES TO LOCAL STORAGE & BUTTONS
     var storage = JSON.parse(window.localStorage.getItem("Cities: ")) || [];
     console.log(storage);
@@ -25,7 +22,6 @@ $(document).ready(function () {
     })
 
     //RETRIEVING INFORMTION FROM OPENWEATHER API: CURRENT WEATHER DATA
-
     function displayInformation() {
         var apiKey = "&APPID=940bd19264df2f0bdcef88196b007f5f";
         var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + apiKey;
