@@ -21,8 +21,13 @@ SO THAT I can plan a trip accordingly
 
 
 ## LINKS:
+<<<<<<< HEAD
 -https://github.com/eplatvoet/Weather-Dashboard
 -https://eplatvoet.github.io/Weather-Dashboard
+=======
+-https://github.com/eplatvoet/Weather-Dashboard \
+-https://eplatvoet.github.io/Weather-Dashboard/
+>>>>>>> 8d412d827c95af3017750ff8d87bc3b06f86356b
 
 ## SCREENSHOT:
 ![screenshot1](assets/images/screenshot1.png)
